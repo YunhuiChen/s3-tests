@@ -292,16 +292,16 @@ def configure():
 def setup():
     alt_client = get_alt_client()
     tenant_client = get_tenant_client()
-    nuke_prefixed_buckets(prefix=prefix)
-    nuke_prefixed_buckets(prefix=prefix, client=alt_client)
-    nuke_prefixed_buckets(prefix=prefix, client=tenant_client)
+#    nuke_prefixed_buckets(prefix=prefix)
+#    nuke_prefixed_buckets(prefix=prefix, client=alt_client)
+#    nuke_prefixed_buckets(prefix=prefix, client=tenant_client)
 
 def teardown():
     alt_client = get_alt_client()
     tenant_client = get_tenant_client()
-    nuke_prefixed_buckets(prefix=prefix)
-    nuke_prefixed_buckets(prefix=prefix, client=alt_client)
-    nuke_prefixed_buckets(prefix=prefix, client=tenant_client)
+#    nuke_prefixed_buckets(prefix=prefix)
+#    nuke_prefixed_buckets(prefix=prefix, client=alt_client)
+#    nuke_prefixed_buckets(prefix=prefix, client=tenant_client)
     try:
         iam_client = get_iam_client()
         list_roles_resp = iam_client.list_roles()
